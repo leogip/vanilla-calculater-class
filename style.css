@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 50px);
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.output {
+  background-color: #2b2d2f;
+  height: 100%;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: right;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding-right: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #fff;
+}
+
+.previous-operand {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.button {
+  background-color: #5f6062;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid #2b2d2f;
+  border-right: 1px solid #2b2d2f;
+}
+
+.button_operation {
+  background-color: #3f4143;
+}
+
+.button_math {
+  color: #fff;
+  background-color: #ff9f0c;
+  border-right: none;
+}
+
+.button_null {
+  grid-column: 1/3;
+  border-bottom-left-radius: 5px;
+}
+
+.button_equals {
+  border-bottom-right-radius: 5px;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}

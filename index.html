@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc Dream</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button data-all-clear class="button ripple button_operation">AC</button>
+      <button data-delete class="button ripple button_operation">DEL</button>
+      <button data-change-sign class="button ripple button_operation">
+        +/-
+      </button>
+      <button data-operation class="button ripple button_math">/</button>
+      <button data-number class="button ripple">7</button>
+      <button data-number class="button ripple">8</button>
+      <button data-number class="button ripple">9</button>
+      <button data-operation class="button ripple button_math">*</button>
+      <button data-number class="button ripple">4</button>
+      <button data-number class="button ripple">5</button>
+      <button data-number class="button ripple">6</button>
+      <button data-operation class="button ripple button_math">-</button>
+      <button data-number class="button ripple">1</button>
+      <button data-number class="button ripple">2</button>
+      <button data-number class="button ripple">3</button>
+      <button data-operation class="button ripple button_math">+</button>
+      <button data-number class="button ripple button_null">0</button>
+      <button data-number class="button ripple">.</button>
+      <button data-equals class="button ripple button_math button_equals">
+        =
+      </button>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
